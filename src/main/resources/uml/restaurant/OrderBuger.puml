@@ -22,17 +22,17 @@ class VeggieBurgerFactory {
     +createBurger() : Burger
 }
 
-BurgerClient -right-> Burger
+BurgerClient -> Burger
 interface Burger {
     +void prepare()
 }
 
-BeefBurger -up-> Burger
+Burger <|... BeefBurger
 class BeefBurger {
     +void prepare()
 }
 
-VeggieBurger -up-> Burger
+Burger <|... VeggieBurger
 class VeggieBurger {
     +void prepare()
 }

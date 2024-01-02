@@ -3,11 +3,6 @@ Chapter 2 Class Diagram
 
 @startuml
 
-abstract BurgerClient {
-    +orderBurger() : void
-    +{abstract} createBurger() : Burger
-}
-
 note as Visibility
 <size:15><b>Visibility
 Sets accessibility for the method or attribute
@@ -22,21 +17,21 @@ note as Inheritance
 <size:15><b>Inheritance
 These are shown as child and parent class
 
-Represented by an open arrow "<|-"
+Represented by an open arrow "<|--" Dashes represent position
 end note
 
 note as Association
 <size:15><b>Association
 There is no dependency between these classes
 
-Represented by a single line between to classes
+Represented by a single line between to classes "--"
 end note
 
 note as Aggregation
 <size:15><b>Aggregation
 There is no dependency between these classes
 
-Represented by an open diamond
+Represented by an open diamond "o--"
 end note
 
 note as Composition
@@ -44,7 +39,7 @@ note as Composition
 When a child object wouldn't be able to exist without
 its parent object
 
-Represented by a closed diamond
+Represented by a closed diamond "*--"
 end note
 
 note as Multiplicity
