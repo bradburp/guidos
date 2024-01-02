@@ -1,0 +1,39 @@
+@startuml
+note as Description
+        BurgerClient beefBurger = new BeefBurgerFactory();
+        beefBurger.orderBurger();
+
+        BurgerClient veggieBurger = new VeggieBurgerFactory();
+        veggieBurger.orderBurger();
+end note
+
+abstract BurgerClient {
+    +orderBurger() : void
+    +{abstract} createBurger() : Burger
+}
+
+BurgerClient <|-- BeefBurgerFactory
+class BeefBurgerFactory {
+    +createBurger() : Burger
+}
+
+BurgerClient <|-- VeggieBurgerFactory
+class VeggieBurgerFactory {
+    +createBurger() : Burger
+}
+
+BurgerClient -right-> Burger
+interface Burger {
+    +void prepare()
+}
+
+BeefBurger -up-> Burger
+class BeefBurger {
+    +void prepare()
+}
+
+VeggieBurger -up-> Burger
+class VeggieBurger {
+    +void prepare()
+}
+@enduml

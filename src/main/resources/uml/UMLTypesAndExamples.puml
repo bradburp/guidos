@@ -1,3 +1,6 @@
+https://plantuml.com/guide
+Chapter 2 Class Diagram
+
 @startuml
 
 abstract BurgerClient {
@@ -19,7 +22,7 @@ note as Inheritance
 <size:15><b>Inheritance
 These are shown as child and parent class
 
-Represented by an open arrow
+Represented by an open arrow "<|-"
 end note
 
 note as Association
@@ -41,7 +44,7 @@ note as Composition
 When a child object wouldn't be able to exist without
 its parent object
 
-Represented by an closed diamond
+Represented by a closed diamond
 end note
 
 note as Multiplicity
